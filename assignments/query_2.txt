@@ -1,0 +1,6 @@
+| parent                                        |
+|:----------------------------------------------|
+| http://www.ifi.uio.no/IN3060/simpsons#Abraham |
+| http://www.ifi.uio.no/IN3060/simpsons#Homer   |
+| http://www.ifi.uio.no/IN3060/simpsons#Marge   |
+| http://www.ifi.uio.no/IN3060/simpsons#Mona    |

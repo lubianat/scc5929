@@ -1,0 +1,4 @@
+|   age | person                                      |
+|------:|:--------------------------------------------|
+|    34 | http://www.ifi.uio.no/IN3060/simpsons#Marge |
+|    36 | http://www.ifi.uio.no/IN3060/simpsons#Homer |

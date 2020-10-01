@@ -1,0 +1,5 @@
+| person                                       |
+|:---------------------------------------------|
+| http://www.ifi.uio.no/IN3060/simpsons#Marge  |
+| http://www.ifi.uio.no/IN3060/simpsons#Mona   |
+| http://www.ifi.uio.no/IN3060/simpsons#Maggie |

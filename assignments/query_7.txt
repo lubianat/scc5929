@@ -1,0 +1,3 @@
+http://www.ifi.uio.no/IN3060/simpsons#Homer http://xmlns.com/foaf/0.1/knows http://www.ifi.uio.no/IN3060/simpsons#Marge
+http://www.ifi.uio.no/IN3060/simpsons#Homer http://xmlns.com/foaf/0.1/name Homer Simpson
+http://www.ifi.uio.no/IN3060/simpsons#Marge http://xmlns.com/foaf/0.1/name Marge Simpson

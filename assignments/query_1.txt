@@ -1,0 +1,12 @@
+| name           | person                                        |
+|:---------------|:----------------------------------------------|
+| Abraham        | http://www.ifi.uio.no/IN3060/simpsons#Abraham |
+| Bart Simpson   | http://www.ifi.uio.no/IN3060/simpsons#Bart    |
+| Herb           | http://www.ifi.uio.no/IN3060/simpsons#Herb    |
+| Homer Simpson  | http://www.ifi.uio.no/IN3060/simpsons#Homer   |
+| Lisa Simpson   | http://www.ifi.uio.no/IN3060/simpsons#Lisa    |
+| Maggie Simpson | http://www.ifi.uio.no/IN3060/simpsons#Maggie  |
+| Marge Simpson  | http://www.ifi.uio.no/IN3060/simpsons#Marge   |
+| Mona           | http://www.ifi.uio.no/IN3060/simpsons#Mona    |
+| Patty          | http://www.ifi.uio.no/IN3060/simpsons#Patty   |
+| Selma          | http://www.ifi.uio.no/IN3060/simpsons#Selma   |
