@@ -171,3 +171,65 @@ fam:Man rdf:type owl:Class .
                 owl:hasValue fam:Male .
        
         foaf:Person rdfs:subClassOf _:x7 .
+
+
+
+## Ex. 2.5
+
+fam:Female owl:disjointWith  fam:Male. 
+
+
+## Ex. 2.6
+
+# I'll assume the task is regarding the genders "male" and "female"
+# and not the persons man and woman
+
+fam:Gender rdf:type owl:Class .
+
+        _:x8 rdf:type owl:Class ;
+                owl:oneOf (fam:Male fam:Female)
+
+        fam:Gender rdfs:subClassOf _:x8 .
+        
+## Ex. 2.7
+
+
+fam:Family owl:disjointWith fam:Gender,
+                            fam:Man,
+                            fam:Woman,
+                            fam:Male,
+                            fam:Female.
+
+                                
+fam:Gender  owl:disjointWith fam:Family,
+                            fam:Man,
+                            fam:Woman.
+
+
+
+fam:Woman  owl:disjointWith fam:Man.
+
+
+## Ex. 2.8
+
+foaf:Person rdf:type owl:Class .
+
+        _:x9 rdf:type owl:Class ;
+                owl:oneOf (fam:Man fam:Woman)
+
+        foaf:Person rdfs:subClassOf _:x9 .
+
+## Ex. 2.9
+
+# There are no inverse relations for the properties in this owl file.
+
+## Ex. 2.10
+
+
+fam:hasSibling rdf:type owl:SymmetricProperty . 
+
+fam:hasFamilyMember rdf:type owl:SymmetricProperty .
+
+
+
+

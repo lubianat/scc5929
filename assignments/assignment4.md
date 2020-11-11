@@ -157,6 +157,7 @@ TransitiveProperty, SymmetricProperty, FunctionalProperty, InverseFunctionalProp
 someValuesFrom,
 minCardinality, maxCardinality, cardinality, hasValue
 • Datatypes: XSD datatypes
+
 For each of the modelling exercises below express the exercise text as a
 set of description logic (DL) axioms.
 
@@ -200,6 +201,10 @@ Define the gender so that there can only be the genders man and woman.
 Explain what disjointness is. For all pair of classes in the family ontology,
 add the correct disjoint axioms.
 
+### Answer
+
+Disjointness means that there are no instances shared by both classes, i.e there is not any individual that is an instance of ("belongs") to both classes.
+
 ## Exercise 2.8
 State that a person is either a man or a woman, but not both.
 
@@ -208,6 +213,10 @@ Explain what inverse properties are. For all the properties that exist in our
 ontology, add the correct inverse property axioms. You are not supposed
 to add new properties, only state that a property is the inverse of an other
 property if they already exist in the ontology.
+
+### Answer
+
+Inverse properties are logically linked in a way that  subject-object pairs are reversed, i. e. they represent inverse relations. As per the w3c example, " persons own cars, cars are owned by persons. The owl:inverseOf construct can be used to define such an inverse relation between properties" 
 
 ## Exercise 2.10
 Explain what it means for a property to be transitive or symmetric.
@@ -220,14 +229,34 @@ in DL literature is Asym(P), Sym(P), Ref(P), Irr(P) or Tra(P), respectively.
 To say that two properties P1 and P2 are disjoint is commonly done in
 DL literature with Dis(P1, P2).
 
+### Answer
+
+Transitive properties "travel" down the hierarchy, and can associate pairs along the chain. More precisely, as per w3c: "When one defines a property P to be a transitive property, this means that if a pair (x,y) is an instance of P, and the pair (y,z) is also instance of P, then we can infer the the pair (x,z) is also an instance of P." 
+
+
+Symmetric properties go both ways, and are symmetric in the subject-object axis. As per W3C: "A symmetric property is a property for which holds that if the pair (x,y) is an instance of P, then the pair (y,x) is also an instance of P."
+
 ## Exercise 2.11
 Is a subproperty of a transitive property necessarily also transitive? Explain
 why / why not?
 
+
+Not necessarily. A subproperty might be more specific, and this specificity hampers transitivity. For example, a "hasAncestor" property could be transitive, while "hasMother", a subproperty of hasAncestor, would not be.  
+
 ## Exercise 2.12
 Is a subproperty of a symmetric property necessarily also symmetric? Explain why / why not?
+
+### Answer
+
+Not necessarily. A subproperty might be more specific, and this specificity hampers symmetry. For example, hasSibling is symmetric, but hasBrother is not. 
 
 ## Exercise 2.13
 Explain what it means for a property to be inverse functional.
 For all properties in our ontology, state that they are inverse functional
 if you believe that is correct.
+
+### Answer
+
+An inverse functional property is any property for which the value is unique, allowing us to unambiguously identify the subject. In the words of the W3C: "If a property is declared to be inverse-functional, then the object of a property statement uniquely determines the subject (some individual). More formally, if we state that P is an owl:InverseFunctionalProperty, then this asserts that a value y can only be the value of P for a single instance x, i.e. there cannot be two distinct instances x1 and x2 such that both pairs (x1,y) and (x2,y) are instances of P." 
+
+For all the properties in the ontology, defined in the way they currently are, there is at least one culture in which the inverse-functionality assumption would break. 
