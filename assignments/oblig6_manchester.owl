@@ -1,0 +1,387 @@
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+
+Ontology: <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6>
+
+
+AnnotationProperty: <http://www.geneontology.org/formats/oboInOwl#created_by>
+
+    
+Datatype: rdf:PlainLiteral
+
+    
+Datatype: rdfs:Literal
+
+    
+Datatype: xsd:int
+
+    
+Datatype: xsd:string
+
+    
+ObjectProperty: <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/ancestor>
+
+    Annotations: 
+        <http://www.geneontology.org/formats/oboInOwl#created_by> <http://orcid.org/0000-0003-2473-2313>
+    
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Characteristics: 
+        Transitive
+    
+    
+ObjectProperty: <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/dam>
+
+    Annotations: 
+        <http://www.geneontology.org/formats/oboInOwl#created_by> <http://orcid.org/0000-0003-2473-2313>
+    
+    SubPropertyOf: 
+        <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/ancestor>
+    
+    Domain: 
+        <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Horse>
+    
+    Range: 
+        <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Horse>
+    
+    
+ObjectProperty: <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/hadInterestIn>
+
+    Annotations: 
+        <http://www.geneontology.org/formats/oboInOwl#created_by> <http://orcid.org/0000-0003-2473-2313>
+    
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    SubPropertyChain: 
+        <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/trains> o <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/hasCompeted>
+    
+    
+ObjectProperty: <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/hasCompeted>
+
+    Annotations: 
+        <http://www.geneontology.org/formats/oboInOwl#created_by> <http://orcid.org/0000-0003-2473-2313>
+    
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    
+ObjectProperty: <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/hasTrainer>
+
+    Annotations: 
+        <http://www.geneontology.org/formats/oboInOwl#created_by> <http://orcid.org/0000-0003-2473-2313>
+    
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Domain: 
+        <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Horse>
+    
+    Range: 
+        <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Person>
+    
+    InverseOf: 
+        <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/trains>
+    
+    
+ObjectProperty: <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/hasWon>
+
+    Annotations: 
+        <http://www.geneontology.org/formats/oboInOwl#created_by> <http://orcid.org/0000-0003-2473-2313>
+    
+    SubPropertyOf: 
+        <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/hasCompeted>
+    
+    
+ObjectProperty: <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/sire>
+
+    Annotations: 
+        <http://www.geneontology.org/formats/oboInOwl#created_by> <http://orcid.org/0000-0003-2473-2313>
+    
+    SubPropertyOf: 
+        <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/ancestor>
+    
+    Domain: 
+        <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Horse>
+    
+    Range: 
+        <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Horse>
+    
+    
+ObjectProperty: <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/trains>
+
+    Annotations: 
+        <http://www.geneontology.org/formats/oboInOwl#created_by> <http://orcid.org/0000-0003-2473-2313>
+    
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    InverseOf: 
+        <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/hasTrainer>
+    
+    
+ObjectProperty: owl:topObjectProperty
+
+    
+DataProperty: <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/age>
+
+    Annotations: 
+        <http://www.geneontology.org/formats/oboInOwl#created_by> <http://orcid.org/0000-0003-2473-2313>
+    
+    Characteristics: 
+        Functional
+    
+    Range: 
+        xsd:int
+    
+    SubPropertyOf: 
+        owl:topDataProperty
+    
+    
+DataProperty: <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/name>
+
+    Annotations: 
+        <http://www.geneontology.org/formats/oboInOwl#created_by> <http://orcid.org/0000-0003-2473-2313>
+    
+    Characteristics: 
+        Functional
+    
+    Range: 
+        xsd:string
+    
+    SubPropertyOf: 
+        owl:topDataProperty
+    
+    
+DataProperty: owl:topDataProperty
+
+    
+Class: <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Animal>
+
+    Annotations: 
+        <http://www.geneontology.org/formats/oboInOwl#created_by> <http://orcid.org/0000-0003-2473-2313>
+    
+    EquivalentTo: 
+        <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Female> or <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Male>
+    
+    
+Class: <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/ColdbloodedHorse>
+
+    Annotations: 
+        <http://www.geneontology.org/formats/oboInOwl#created_by> <http://orcid.org/0000-0003-2473-2313>
+    
+    SubClassOf: 
+        <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Horse>
+    
+    DisjointWith: 
+        <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/WarmbloodedHorse>
+    
+    
+Class: <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Female>
+
+    Annotations: 
+        <http://www.geneontology.org/formats/oboInOwl#created_by> <http://orcid.org/0000-0003-2473-2313>
+    
+    
+Class: <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Filly>
+
+    Annotations: 
+        <http://www.geneontology.org/formats/oboInOwl#created_by> <http://orcid.org/0000-0003-2473-2313>
+    
+    EquivalentTo: 
+        <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Female>
+         and <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Horse>
+         and (<http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/age> max 4 rdfs:Literal)
+    
+    SubClassOf: 
+        <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Horse>
+    
+    
+Class: <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Horse>
+
+    Annotations: 
+        <http://www.geneontology.org/formats/oboInOwl#created_by> <http://orcid.org/0000-0003-2473-2313>
+    
+    SubClassOf: 
+        <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Animal>,
+        <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Horse>
+         and (<http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/dam> exactly 1 (<http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Female>
+         and <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Horse>)),
+        <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Horse>
+         and (<http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/sire> exactly 1 (<http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Horse>
+         and <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Male>))
+    
+    DisjointWith: 
+        <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/HorseRace>, <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Person>
+    
+    
+Class: <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/HorseRace>
+
+    Annotations: 
+        <http://www.geneontology.org/formats/oboInOwl#created_by> <http://orcid.org/0000-0003-2473-2313>
+    
+    DisjointWith: 
+        <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Horse>, <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Person>
+    
+    
+Class: <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Male>
+
+    Annotations: 
+        <http://www.geneontology.org/formats/oboInOwl#created_by> <http://orcid.org/0000-0003-2473-2313>
+    
+    
+Class: <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/MonteHorse>
+
+    Annotations: 
+        <http://www.geneontology.org/formats/oboInOwl#created_by> <http://orcid.org/0000-0003-2473-2313>
+    
+    EquivalentTo: 
+        <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Horse>
+         and (<http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/hasCompeted> only <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/MonteRace>)
+    
+    SubClassOf: 
+        <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/RaceHorse>
+    
+    
+Class: <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/MonteRace>
+
+    Annotations: 
+        <http://www.geneontology.org/formats/oboInOwl#created_by> <http://orcid.org/0000-0003-2473-2313>
+    
+    SubClassOf: 
+        <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/HorseRace>
+    
+    
+Class: <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Person>
+
+    Annotations: 
+        <http://www.geneontology.org/formats/oboInOwl#created_by> <http://orcid.org/0000-0003-2473-2313>
+    
+    SubClassOf: 
+        <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Person>
+         and (<http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/name> some xsd:string)
+    
+    DisjointWith: 
+        <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Horse>, <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/HorseRace>
+    
+    
+Class: <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/RaceHorse>
+
+    Annotations: 
+        <http://www.geneontology.org/formats/oboInOwl#created_by> <http://orcid.org/0000-0003-2473-2313>
+    
+    EquivalentTo: 
+        <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Horse>
+         and (<http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/hasCompeted> some <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/HorseRace>)
+    
+    SubClassOf: 
+        <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Horse>,
+        <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Horse>
+         and (<http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/hasTrainer> some <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Person>),
+        <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Horse>
+         and (<http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/name> some xsd:string)
+    
+    HasKey: 
+        <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/name>
+    
+    
+Class: <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Stallion>
+
+    Annotations: 
+        <http://www.geneontology.org/formats/oboInOwl#created_by> <http://orcid.org/0000-0003-2473-2313>
+    
+    EquivalentTo: 
+        <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Horse>
+         and <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Male>
+         and (<http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/age> min 4 rdfs:Literal)
+    
+    SubClassOf: 
+        <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Horse>
+    
+    
+Class: <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/SuperHorse>
+
+    Annotations: 
+        <http://www.geneontology.org/formats/oboInOwl#created_by> <http://orcid.org/0000-0003-2473-2313>
+    
+    EquivalentTo: 
+        <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Horse>
+         and (<http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/hasWon> min 100 <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/HorseRace>)
+    
+    SubClassOf: 
+        <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/RaceHorse>
+    
+    
+Class: <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/WarmbloodedHorse>
+
+    Annotations: 
+        <http://www.geneontology.org/formats/oboInOwl#created_by> <http://orcid.org/0000-0003-2473-2313>
+    
+    SubClassOf: 
+        <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Horse>
+    
+    DisjointWith: 
+        <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/ColdbloodedHorse>
+    
+    
+Individual: <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Doctor_Rodney>
+
+    Annotations: 
+        <http://www.geneontology.org/formats/oboInOwl#created_by> <http://orcid.org/0000-0003-2473-2313>
+    
+    Facts:  
+     <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/name>  "Doctor Rodney"
+    
+    
+Individual: <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Elitloppet1986>
+
+    Annotations: 
+        <http://www.geneontology.org/formats/oboInOwl#created_by> <http://orcid.org/0000-0003-2473-2313>
+    
+    Types: 
+        <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/HorseRace>,
+        not (<http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/MonteRace>)
+    
+    
+Individual: <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Kjell_Håkonsen>
+
+    Annotations: 
+        <http://www.geneontology.org/formats/oboInOwl#created_by> <http://orcid.org/0000-0003-2473-2313>
+    
+    Types: 
+        <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Person>
+    
+    Facts:  
+     <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/name>  "Kjell Håkonsen"
+    
+    
+Individual: <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Rex_Rodney>
+
+    Annotations: 
+        <http://www.geneontology.org/formats/oboInOwl#created_by> <http://orcid.org/0000-0003-2473-2313>
+    
+    Types: 
+        <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/SuperHorse>
+    
+    Facts:  
+     <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/hasTrainer>  <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Kjell_Håkonsen>,
+     <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/hasWon>  <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Elitloppet1986>,
+     <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/name>  "Rex Rodney"
+    
+    
+Individual: <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Steady,_Ready,_Go>
+
+    Annotations: 
+        <http://www.geneontology.org/formats/oboInOwl#created_by> <http://orcid.org/0000-0003-2473-2313>
+    
+    Types: 
+        <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Filly>,
+        <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/MonteHorse>
+    
+    
