@@ -1,3 +1,4 @@
+Prefix: dc: <http://purl.org/dc/elements/1.1/>
 Prefix: owl: <http://www.w3.org/2002/07/owl#>
 Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -197,7 +198,7 @@ Class: <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Filly>
     EquivalentTo: 
         <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Female>
          and <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Horse>
-         and (<http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/age> max 4 rdfs:Literal)
+         and (not (<http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/age> some xsd:int[>= "4"^^xsd:int]))
     
     SubClassOf: 
         <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Horse>
@@ -299,10 +300,11 @@ Class: <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Stallion>
     EquivalentTo: 
         <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Horse>
          and <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Male>
-         and (<http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/age> min 4 rdfs:Literal)
+         and (<http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/age> some xsd:int[>= "4"^^xsd:int])
     
     SubClassOf: 
-        <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Horse>
+        <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Horse>,
+        <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/Male>
     
     
 Class: <http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/SuperHorse>
