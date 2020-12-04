@@ -49,13 +49,10 @@ SubClassOf:
 
 21.  If a horse has a trainer, then this trainer trains the horse. 
 
-ObjectProperty:hasTrainer
-
-    InverseOf: 
-        trains
+ObjectProperty:hasTrainer    InverseOf:       trains
 
 
-1.2 Questions 
+# 1.2 Questions 
 Answer the following questions with "Yes", "No" or "Unknown", and a sentence or two to back up the claim, referring to the axioms you have created in your ontology as arguments. 
 1. Is Rex Rodney a male or a female animal? 
 
@@ -66,36 +63,24 @@ Yes. A SuperHorse is a Horse, which is an Animal, which is Male or Female.
 Yes. he trains a horse that competed on that race. 
 
 3. Is Rex Rodney a warmblooded horse?
+
 Unknown. No assertions or inferences that allow such conclusion. 
 
 4. Is Steady, Ready, Go a warmblooded horse?
+
 No. Every warm-blooded horse which has competed in a monté race must be between 4–12 years old. Every monté horse is a racehorse that has only competed in monté races. The horse called "Steady, Ready, Go" is a filly and monté horse.
 
 5. Is Steady, Ready, Go a coldblooded horse?
+
 Unknown. The ColdBloodedHorse class is disjoint with WarmBloodedHorse, but we do not know if every horse is either ColdBloodedHorse or WarmBloodedHorse.
 
-6. Did Steady, Ready, Go compete in Elitloppet 1986? 
+6. Did Steady, Ready, Go compete in Elitloppet 1986?
+
 No. Every monté horse is a racehorse that has only competed in monté races. Elitloppet1986 is not a monté race.
 
 # 2 Exercise: Mapping DBpedia to your ontology 
 
 The task of this exercise is to create a mapping of parts of the DBpedia vocabulary about horses and racehorses to your ontology from the exercise above. 
-
-Below is an excerpt from the result of running a DESCRIBE query on the dbpedia.org SPARQL endpoint: http://dbpedia.org/sparql. The excerpt contains data about two racehorses, one of them is listed below, a racehorse called "In the Wings". The exercise is to create a mapping ontology that maps all properties mentioned in the excerpt to the ontology you created in the exercise above.
-
-The mapping shall be created by giving a series of axioms (i.e., sub- class/property and equivalence axioms) which relate the dbpedia properties to your classes and properties, e.g, 
-
-dbpprop:dam owl:equivalentProperty :dam 
-
-creates a mapping between the dbpprop:dam and "your" :dam property.
-
-Note that the left-hand-side and right-hand-side of axioms can be complex classes or properties, e.g., dbpprop:horsename should be mapped to some combination of :name and :Horse (not only to :name) (Tip: you need to use the general class axioms feature in Protégé to express this.) 
-
-- I've tried dbp:horsename EquivalentTo: name and rdfs:type Horse for this, but it did not work
-
-Note the owl:equivalentProperty relation only applies to lists of properties:
-axiom ::= 'EquivalentProperties(' URIreference URIreference  { URIreference } ')' ...
-
 
 Your mapping ontology should be a separate file and it should import the ontology at the above address from this address and additionally the ontology you have made in the first exercise. 
 
@@ -119,7 +104,17 @@ Apply reasoning to your ontology and answer the following questions:
 
 ### 3. Since "Northern Dancer" is an ancestor of "In the Wings", the ancestors of "Northern Dancer" should also be the ancestors of "In the Wings". Why is this not the case?
 
-The information of " "Northern Dancer" is an ancestor of "In the Wings" " is not asserted and cannot be inferred from the ontology.
+Protege and the reasoners I tried were not able to handle that complexyty. 
+
+The father of the father of "In the Wings" has the name 'Northern Dancer', and this is stated via a blank node. 
+
+Names are keys for RaceHorses. We do not know, however, if the horse named "Northern Dancer" that is the ancestor of "In the Wings" is a race horse. 
+
+If it were, then we would infer they are the same. 
+
+What we know by the ontology does not allow that inference. 
+
+So we only know that a "Northern Dancer" is the ancestor, not the exactly the dbpedia:Northern_Dancer, thus we cannot infer the other ancestors. 
 
 # 3.2 Annotation properties 
 ## In OWL, rdfs:label is a predefined annotation property, see http://www.w3.org/TR/owl-ref/#Annotations. Explain what an annotation property is and why they are useful. 

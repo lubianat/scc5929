@@ -97,6 +97,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/dam -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/dam">
+        <rdfs:subPropertyOf rdf:resource="http://dbpedia.org/property/m"/>
+    </rdf:Description>
+    
+
+
     <!-- http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/hasCompeted -->
 
     <rdf:Description rdf:about="http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/hasCompeted"/>
@@ -111,7 +119,9 @@
 
     <!-- http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/sire -->
 
-    <rdf:Description rdf:about="http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/sire"/>
+    <rdf:Description rdf:about="http://www.semanticweb.org/lubianat/ontologies/2020/11/oblig6/sire">
+        <rdfs:subPropertyOf rdf:resource="http://dbpedia.org/property/f"/>
+    </rdf:Description>
     
 
 
